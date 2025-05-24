@@ -1,31 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-style-script: "Style Script", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 :root {
   --dark-purp: #6e4382;
   --light-purp: #decffa;
+  --grey: #e7e7e7;
 }
 
 html {
   background-color: #ffffff;
-  font-family: sans-serif;
+  font-family: Inter;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+  border: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  position: relative;
 }
 
 main {
   flex: auto;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.75rem;
 }

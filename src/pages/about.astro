@@ -22,18 +22,19 @@ const info = {
 	</head>
 	<body>
         <Navigation />
-        <main>
-            <h1 class="text-red-400">Meet your Fairy Browmother</h1>
-            <h2>... and my new Astro site!</h2>
-            <p>Hi! My name is {info.name}.  I'm a {info.job} located in {info.location}.</p>
-            <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-            <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-            <p>My skills include:</p>
-            <ul>
-                {info.skills.map((skill) => {
-                    return <li>{skill}</li>
-                })}
-            </ul>
+        <main class="py-16 px-44">
+            <section class="pt-24 flex justify-between gap-6">
+                <div class="flex flex-col gap-6 max-w-2xl min-w-80">
+                    <h2>Meet your Fairy Browmother</h1>
+                    <p class="text-gray-500">Sub heading, can be whatever OR removed entirely</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo sed augue hendrerit molestie. Proin facilisis volutpat libero dictum ullamcorper. Aenean volutpat efficitur neque. Maecenas vitae ullamcorper erat, ac condimentum est. Integer dictum leo non purus luctus fermentum et sed metus. Donec faucibus ante tincidunt nunc sodales, sit amet eleifend neque sollicitudin. Sed varius tortor tortor, id luctus sapien iaculis eu. Duis facilisis eu massa a pharetra. Nulla varius lacinia elit nec mollis. Morbi non elit finibus, facilisis dui vitae, tristique lorem. Nullam a efficitur purus. </p>
+                    <div class="w-28 h-24 bg-[var(--light-purp)]">
+                    </div>
+                </div>
+                <div class="min-w-96 h-[30rem]">
+                    <img alt="About Img" class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"/>
+                </div>
+            </section>
         </main>
         <Footer />
 	</body>
