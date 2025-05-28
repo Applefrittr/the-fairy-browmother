@@ -7,4 +7,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: "https://applefrittr.github.io",
+  base: "the-fairy-browmother",
 });
