@@ -1,0 +1,35 @@
+---
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
+import AboutJSON from '../content/about.json'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/bat.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>About</title>
+	</head>
+	<body>
+        <Navigation />
+        <main class="py-16 px-44">
+            <section class="pt-28 flex justify-between gap-6">
+                <div class="flex flex-col gap-6 max-w-2xl min-w-80">
+                    <h2>Meet your Fairy Browmother</h1>
+                    <p class="text-gray-500">Sub heading, can be whatever OR removed entirely</p>
+                    <p>{AboutJSON.text}</p>
+                    <div class="w-28 h-24 bg-[var(--light-purp)]">
+                        <!-- Graphic element here -->
+			        </div>
+                </div>
+                <div class="min-w-96 h-[30rem]">
+                    <img alt="About Img" class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"/>
+                </div>
+            </section>
+        </main>
+        <Footer />
+	</body>
+</html>

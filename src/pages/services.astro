@@ -1,0 +1,54 @@
+---
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro'
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/bat.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Services</title>
+	</head>
+	<body>
+		<Navigation />
+        <main>
+			<div class="bg-[var(--grey)] h-[36rem] w-full flex flex-col justify-center items-center">
+				<h2>Services</h2>
+				<p>Services Description</p>
+			</div>
+			<section class="py-16 px-44 flex flex-col gap-8">
+				<div class="flex gap-12 justify-center items-center">
+					<div class="flex flex-col gap-6 max-w-[624px]">
+						<h3>Service 1</h3>
+						<p>Description of the service, as long or as short as you want. blah blah blah something something something</p>
+						<div class="flex gap-8">
+							<p class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px]">Price</p>
+							<p class="p-3 px-4 bg-[var(--light-purp)] rounded-[8px]">Length of Time</p>
+						</div>
+					</div>
+					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
+						<!-- Img element here -->
+					</div>
+				</div>
+				<div class="flex gap-12 justify-center items-center">
+					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
+						<!-- Img element here -->
+					</div>
+					<div class="flex flex-col gap-6 max-w-[624px]">
+						<h3>Service 2</h3>
+						<p>Description of the service, as long or as short as you want.  blah blah blah something something something</p>
+						<div class="flex gap-8">
+							<p class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px]">Price</p>
+							<p class="p-3 px-4 bg-[var(--light-purp)] rounded-[8px]">Length of Time</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
