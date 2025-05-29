@@ -1,27 +1,32 @@
 ---
-const {question, answer} = Astro.props
-
+const { question, answer } = Astro.props;
 ---
 
 <faq-item class="flex flex-col items-center">
-    <span class="font-bold">{question}
-        <button class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer">Expand</button>
-    </span>
-    <p class="m-4 p-4 bg-[var(--light-purp)] rounded-[8px] hidden">{answer}</p>
+  <span class="font-bold"
+    >{question}
+    <button
+      class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer"
+      >Expand</button
+    >
+  </span>
+  <p class="m-4 p-4 bg-[var(--light-purp)] rounded-[8px] hidden">{answer}</p>
 </faq-item>
 
 <script>
-    class FAQItem extends HTMLElement {
-        connectedCallback() {
-            const btn = this.querySelector("button")
-            const p = this.querySelector("p")
+  class FAQItem extends HTMLElement {
+    connectedCallback() {
+      const btn = this.querySelector("button");
+      const p = this.querySelector("p");
 
-            btn?.addEventListener("click", () => {
-                p?.classList.toggle("hidden")
+      btn?.addEventListener("click", () => {
+        p?.classList.toggle("hidden");
 
-                p?.classList.contains("hidden") ? btn.innerText = "Expand" : btn.innerText = "Hide"
-            })
-        }
+        p?.classList.contains("hidden")
+          ? (btn.innerText = "Expand")
+          : (btn.innerText = "Hide");
+      });
     }
-    customElements.define('faq-item', FAQItem)
+  }
+  customElements.define("faq-item", FAQItem);
 </script>
