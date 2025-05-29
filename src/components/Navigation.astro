@@ -5,7 +5,9 @@
 <section
   class="flex justify-between items-center p-8 absolute top-0 left-0 w-full"
 >
-  <h1 class="font-bold text-6xl font-style-script">The Fairy Browmother</h1>
+  <h1 class="font-bold text-4xl md:text-6xl font-style-script">
+    The Fairy Browmother
+  </h1>
   <nav class="hidden md:flex gap-4 px-8">
     <a href="/the-fairy-browmother/">Home</a>
     <a href="/the-fairy-browmother/about">About</a>
@@ -14,5 +16,31 @@
     <a href="/the-fairy-browmother/faq">FAQ</a>
     <a href="/the-fairy-browmother/contact">Contact</a>
   </nav>
-  <button class="p-4 bg-[var(--dark-purp)] text-white">Menu</button>
+  <button
+    class="block md:hidden p-4 bg-[var(--dark-purp)] text-white rounded-[8px]"
+    id="mobile-menu"
+  >
+    Menu
+  </button>
+  <nav
+    class="md:hidden flex flex-col absolute h-svh w-60 bg-[var(--light-purp)] gap-8 p-8 top-0 left-0 -translate-x-full transition transform ease-in-out duration-250"
+    id="mobile-nav"
+  >
+    <h1 class="font-bold text-4xl font-style-script">The Fairy Browmother</h1>
+    <a href="/the-fairy-browmother/">Home</a>
+    <a href="/the-fairy-browmother/about">About</a>
+    <a href="/the-fairy-browmother/services">Services</a>
+    <a href="/the-fairy-browmother/portfolio">Portfolio</a>
+    <a href="/the-fairy-browmother/faq">FAQ</a>
+    <a href="/the-fairy-browmother/contact">Contact</a>
+  </nav>
 </section>
+
+<script>
+  const menuBtn = document.querySelector("#mobile-menu");
+  const mobileNav = document.querySelector("#mobile-nav");
+
+  menuBtn?.addEventListener("click", () => {
+    mobileNav?.classList.toggle("translate-x-0");
+  });
+</script>
