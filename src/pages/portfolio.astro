@@ -1,53 +1,56 @@
 ---
-import '../styles/global.css'
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
-
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/the-fairy-browmother/bat.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
-	</head>
-	<body>
-		<Navigation />
-        <main class="flex flex-col justify-center items-center pb-16">
-			<div class="bg-[var(--grey)] h-[36rem] w-full flex flex-col justify-center items-center">
-				<h2>Portfolio</h2>
-			</div>	
-			<div class="h-16 w-full bg-[var(--dark-purp)]"></div>
-			<section class="py-16 px-44 flex justify-center gap-8">
-				<div class="flex flex-col gap-8">
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-				</div>
-				<div class="flex flex-col gap-8 pt-16">
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-					<div class="bg-[var(--grey)] w-[624px] h-[400px]">
-						<!-- Img element here -->
-					</div>
-				</div>
-			</section>
-			<div class="w-28 h-24 bg-[var(--light-purp)]">
-				<!-- Graphic element here -->
-			</div>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/the-fairy-browmother/bat.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <Navigation />
+    <main class="flex flex-col justify-center items-center pb-16">
+      <div
+        class="bg-[var(--grey)] h-[36rem] w-full flex flex-col justify-center items-center"
+      >
+        <h2>Portfolio</h2>
+      </div>
+      <div class="h-16 w-full bg-[var(--dark-purp)]"></div>
+      <section
+        class="py-16 px-8 md:px-44 flex flex-col md:flex-row justify-center gap-8 w-full"
+      >
+        <div class="flex flex-col gap-8">
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 pt-16">
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+          <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
+            <!-- Img element here -->
+          </div>
+        </div>
+      </section>
+      <div class="w-28 h-24 bg-[var(--light-purp)]">
+        <!-- Graphic element here -->
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

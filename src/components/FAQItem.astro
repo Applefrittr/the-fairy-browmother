@@ -1,27 +1,46 @@
 ---
-const {question, answer} = Astro.props
-
+const { question, answer } = Astro.props;
 ---
 
 <faq-item class="flex flex-col items-center">
-    <span class="font-bold">{question}
-        <button class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer">Expand</button>
-    </span>
-    <p class="m-4 p-4 bg-[var(--light-purp)] rounded-[8px] hidden">{answer}</p>
+  <div class="font-bold flex gap-2 items-center">
+    {question}
+    <button
+      class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer h-max"
+      >Expand</button
+    >
+  </div>
+  <p
+    class="mx-4 px-4 bg-[var(--light-purp)] rounded-[8px] h-0 transition-all duration-500 hidden overflow-hidden"
+  >
+    {answer}
+  </p>
 </faq-item>
 
 <script>
-    class FAQItem extends HTMLElement {
-        connectedCallback() {
-            const btn = this.querySelector("button")
-            const p = this.querySelector("p")
+  class FAQItem extends HTMLElement {
+    connectedCallback() {
+      const btn = this.querySelector("button");
+      const p = this.querySelector("p");
 
-            btn?.addEventListener("click", () => {
-                p?.classList.toggle("hidden")
+      btn?.addEventListener("click", () => {
+        p?.classList.toggle("hidden");
 
-                p?.classList.contains("hidden") ? btn.innerText = "Expand" : btn.innerText = "Hide"
-            })
-        }
+        p?.classList.contains("hidden")
+          ? (btn.innerText = "Expand")
+          : (btn.innerText = "Hide");
+
+        setTimeout(() => {
+          p?.classList.toggle("h-96");
+          p?.classList.toggle("py-4");
+          p?.classList.toggle("my-4");
+
+          setTimeout(() => {
+            p?.classList.toggle("h-max");
+          }, 100);
+        }, 100);
+      });
     }
-    customElements.define('faq-item', FAQItem)
+  }
+  customElements.define("faq-item", FAQItem);
 </script>

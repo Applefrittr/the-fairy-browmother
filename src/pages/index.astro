@@ -1,23 +1,26 @@
 ---
-import '../styles/global.css'
-import Navigation from '../components/Navigation.astro'
-import Footer from '../components/Footer.astro'
-
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/the-fairy-browmother/bat.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>The Fairy Browmother</title>
-	</head>
-	<body>
-		<Navigation />
-        <main class="flex flex-col">
-			<img alt="Splash Image" src="" class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"/>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/the-fairy-browmother/bat.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>The Fairy Browmother</title>
+  </head>
+  <body>
+    <Navigation />
+    <main class="flex flex-col">
+      <img
+        alt="Splash Image"
+        src=""
+        class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"
+      />
+    </main>
+    <Footer />
+  </body>
 </html>
