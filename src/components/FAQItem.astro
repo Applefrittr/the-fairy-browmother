@@ -10,7 +10,11 @@ const { question, answer } = Astro.props;
       >Expand</button
     >
   </div>
-  <p class="m-4 p-4 bg-[var(--light-purp)] rounded-[8px] hidden">{answer}</p>
+  <p
+    class="mx-4 px-4 bg-[var(--light-purp)] rounded-[8px] h-0 transition-all duration-500 hidden overflow-hidden"
+  >
+    {answer}
+  </p>
 </faq-item>
 
 <script>
@@ -25,6 +29,16 @@ const { question, answer } = Astro.props;
         p?.classList.contains("hidden")
           ? (btn.innerText = "Expand")
           : (btn.innerText = "Hide");
+
+        setTimeout(() => {
+          p?.classList.toggle("h-96");
+          p?.classList.toggle("py-4");
+          p?.classList.toggle("my-4");
+
+          setTimeout(() => {
+            p?.classList.toggle("h-max");
+          }, 100);
+        }, 100);
       });
     }
   }
