@@ -3,13 +3,13 @@ const { question, answer } = Astro.props;
 ---
 
 <faq-item class="flex flex-col items-center">
-  <span class="font-bold"
-    >{question}
+  <div class="font-bold flex gap-2 items-center">
+    {question}
     <button
-      class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer"
+      class="p-3 px-4 text-white bg-[var(--dark-purp)] rounded-[8px] ml-4 hover:cursor-pointer h-max"
       >Expand</button
     >
-  </span>
+  </div>
   <p class="m-4 p-4 bg-[var(--light-purp)] rounded-[8px] hidden">{answer}</p>
 </faq-item>
 
