@@ -31,14 +31,14 @@ const { question, answer } = Astro.props;
           setTimeout(() => {
             p?.classList.toggle("py-4");
             p?.classList.toggle("my-4");
-            p?.classList.toggle("max-h-[425px]");
+            p?.classList.toggle("max-h-[500px]");
           }, 100);
         } else {
           btn.innerText = "Expand";
 
           p?.classList.toggle("py-4");
           p?.classList.toggle("my-4");
-          p?.classList.toggle("max-h-[425px]");
+          p?.classList.toggle("max-h-[500px]");
 
           setTimeout(() => {
             p?.classList.toggle("hidden");
