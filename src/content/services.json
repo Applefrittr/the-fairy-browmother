@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ombré Powder Brows",
+    "description": "The Fairy Browmother's specialty - the brow perfected.",
+    "price": "$300.00",
+    "time": "~4-5 hours"
+  },
+  {
+    "name": "Brow Corrections",
+    "description": "The Fairy Browmother corrects prior work to ensure you are satisfied with your look.",
+    "price": "$350.00",
+    "time": "~2-5 hours"
+  },
+  {
+    "name": "Touch Up",
+    "description": "Touch up work to ensure your perfect brows stay perfect.",
+    "price": "$200.00",
+    "time": "~1-2 hours"
+  }
+]
