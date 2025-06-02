@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Service from "../components/Service.astro";
+import servicesJSON from "../content/services.json";
 ---
 
 <html lang="en">
@@ -22,7 +24,7 @@ import Footer from "../components/Footer.astro";
         <p>Services Description</p>
       </div>
       <section class="py-16 px-8 md:px-44 flex flex-col gap-8">
-        <div
+        <!-- <div
           class="flex flex-col md:flex-row gap-12 justify-center items-center"
         >
           <div class="flex flex-col gap-6 max-w-[624px]">
@@ -43,14 +45,15 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
           <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
-            <!-- Img element here -->
+            
           </div>
         </div>
+
         <div
           class="flex flex-col-reverse md:flex-row gap-12 justify-center items-center"
         >
           <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
-            <!-- Img element here -->
+            
           </div>
           <div class="flex flex-col gap-6 max-w-[624px]">
             <h3>Service 2</h3>
@@ -69,7 +72,21 @@ import Footer from "../components/Footer.astro";
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
+
+        {
+          servicesJSON.map((service, i) => {
+            return (
+              <Service
+                name={service.name}
+                description={service.description}
+                price={service.price}
+                time={service.time}
+                reverse={i % 2 === 0 ? false : true}
+              />
+            );
+          })
+        }
       </section>
     </main>
     <Footer />

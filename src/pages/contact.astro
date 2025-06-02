@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import contactJSON from "../content/contact.json";
 ---
 
 <html lang="en">
@@ -18,10 +19,12 @@ import Footer from "../components/Footer.astro";
       <section class="pt-28 w-2xs flex flex-col items-center gap-8 m-auto">
         <h2>Contact</h2>
         <p class="text-gray-600 text-center">
-          Contact info goes here: phone, address, email, etc.
+          {contactJSON.info}
         </p>
         <nav class="flex gap-6">
-          <a href="https://www.google.com">
+          <a
+            href="https://www.facebook.com/people/The-Fairy-Browmother/100091707291136/"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -35,7 +38,7 @@ import Footer from "../components/Footer.astro";
               ></path>
             </svg>
           </a>
-          <a href="https://www.google.com">
+          <a href="https://www.instagram.com/the_fairy_browmother/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
@@ -49,7 +52,7 @@ import Footer from "../components/Footer.astro";
               ></path>
             </svg>
           </a>
-          <a href="https://www.google.com">
+          <a href="https://www.tiktok.com/@the_fairy_browmother">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
