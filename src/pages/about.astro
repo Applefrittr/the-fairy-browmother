@@ -12,16 +12,20 @@ import AboutJSON from "../content/about.json";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>About - The Fairy Browmother</title>
+    <meta
+      name="description"
+      content="Learn about The Fairy Browmother's passion for enhancing natural beauty through ombré powdered brows. Meet the certified artist behind the precision and artistry."
+    />
   </head>
   <body>
     <Navigation />
     <main class="py-16 px-8 md:px-44">
       <section class="pt-28 flex flex-col md:flex-row justify-between gap-6">
         <div class="flex flex-col gap-6 max-w-2xl">
-          <h1>Meet your Fairy Browmother</h1>
-          <h2 class="text-gray-500">
+          <h2>Meet your Fairy Browmother</h2>
+          <h4 class="text-gray-500">
             {AboutJSON.description}
-          </h2>
+          </h4>
           <p>{AboutJSON.text}</p>
           <div class="w-28 h-24 bg-[var(--light-purp)]">
             <!-- Graphic element here -->

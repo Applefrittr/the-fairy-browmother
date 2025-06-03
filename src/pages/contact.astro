@@ -12,12 +12,16 @@ import contactJSON from "../content/contact.json";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Contact - The Fairy Browmother</title>
+    <meta
+      name="description"
+      content="Ready to book your ombré brow session or have questions? Get in touch with The Fairy Browmother today to schedule a consultation or appointment."
+    />
   </head>
   <body>
     <Navigation />
     <main class="pt-16 flex flex-col gap-8">
       <section class="pt-28 w-2xs flex flex-col items-center gap-8 m-auto">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
         <p class="text-gray-600 text-center">
           {contactJSON.info}
         </p>

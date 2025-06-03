@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import indexJSON from "../content/index.json";
 ---
 
 <html lang="en">
@@ -12,15 +13,23 @@ import Footer from "../components/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>The Fairy Browmother - Professional Permanent Makeup Artist</title>
+    <meta
+      name="description"
+      content="Enhance your natural beauty with expertly crafted ombré powdered brows by a certified permanent makeup artist. Book your personalized consultation today."
+    />
   </head>
   <body>
     <Navigation />
-    <main class="flex flex-col">
+    <main class="flex flex-col relative">
       <img
         alt="Splash Image"
         src=""
         class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"
       />
+      <div class="absolute right-0 md:right-32 bottom-8 p-4">
+        <h3 class="md:text-5xl">{indexJSON.description}</h3>
+        <p>{indexJSON.sub}</p>
+      </div>
     </main>
     <Footer />
   </body>
