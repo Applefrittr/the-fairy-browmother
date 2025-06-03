@@ -33,9 +33,14 @@ main {
   flex: auto;
 }
 
+h1 {
+  font-weight: 600;
+  font-size: 2.75rem;
+}
+
 h2 {
   font-weight: 600;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
 }
 
 h3 {
