@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import MetaTags from "../components/MetaTags.astro";
+import { portfolio } from "../content/metaData.json";
 ---
 
 <html lang="en">
@@ -10,10 +12,11 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/png" href="/the-fairy-browmother/bat.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Portfolio - The Fairy Browmother</title>
-    <meta
-      name="description"
-      content="Browse The Fairy Browmother's portfolio of beautifully done ombré powder brows. See real client transformations and our commitment to flawless results."
+    <MetaTags
+      title={portfolio.title}
+      description={portfolio.description}
+      url={portfolio.url}
+      img={portfolio.img}
     />
   </head>
   <body>

@@ -1,0 +1,38 @@
+{
+  "index": {
+    "title": "The Fairy Browmother - Professional Permanent Makeup Artist",
+    "description": "Enhance your natural beauty with expertly crafted ombré powdered brows by a certified permanent makeup artist. Book your personalized consultation today.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  },
+  "about": {
+    "title": "About - The Fairy Browmother",
+    "description": "Learn about The Fairy Browmother's passion for enhancing natural beauty through ombré powdered brows. Meet the certified artist behind the precision and artistry.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/about",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  },
+  "services": {
+    "title": "Services - The Fairy Browmother",
+    "description": "Explore The Fairy Browmother's professional permanent makeup services, including ombré powdered brows tailored to suit your facial features and beauty goals.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/services",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  },
+  "portfolio": {
+    "title": "Portfolio - The Fairy Browmother",
+    "description": "Browse The Fairy Browmother's portfolio of beautifully done ombré powder brows. See real client transformations and our commitment to flawless results.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/portfolio",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  },
+  "faq": {
+    "title": "FAQ - The Fairy Browmother",
+    "description": "Get answers to frequently asked questions about ombré powdered brows, healing time, aftercare, and what to expect from your session.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/faq",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  },
+  "contact": {
+    "title": "Contact - The Fairy Browmother",
+    "description": "Ready to book your ombré brow session or have questions? Get in touch with The Fairy Browmother today to schedule a consultation or appointment.",
+    "url": "https://applefrittr.github.io/the-fairy-browmother/contact",
+    "img": "/the-fairy-browmother/TheFairyBrowmotherLogo.jpg"
+  }
+}
