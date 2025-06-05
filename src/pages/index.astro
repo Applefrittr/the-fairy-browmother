@@ -5,6 +5,9 @@ import Footer from "../components/Footer.astro";
 import indexJSON from "../assets/index.json";
 import MetaTags from "../components/MetaTags.astro";
 import { index } from "../assets/metaData.json";
+import { Image } from "astro:assets";
+
+import splashimg from "../assets/pictures/graphics/TFBMSplashGreenClose.png";
 ---
 
 <html lang="en">
@@ -22,14 +25,16 @@ import { index } from "../assets/metaData.json";
     />
   </head>
   <body>
-    <Navigation />
+    <Navigation fontColor="white" />
     <main class="flex flex-col relative">
-      <img
-        alt="Splash Image"
-        src=""
-        class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"
+      <Image
+        alt=""
+        src={splashimg}
+        class="w-full h-full bg-[var(--grey)] flex-auto object-cover object-[30%]"
       />
-      <div class="absolute right-0 md:right-32 bottom-8 p-4">
+      <div
+        class="absolute right-0 md:right-32 bottom-8 p-4 text-white text-shadow-black text-shadow-2xs"
+      >
         <h3 class="md:text-5xl">{indexJSON.description}</h3>
         <p>{indexJSON.sub}</p>
       </div>
