@@ -5,6 +5,9 @@ import Footer from "../components/Footer.astro";
 import AboutJSON from "../assets/about.json";
 import MetaTags from "../components/MetaTags.astro";
 import { about } from "../assets/metaData.json";
+import { Image } from "astro:assets";
+
+import aboutimg from "../assets/pictures/graphics/TFBMAbout.png";
 ---
 
 <html lang="en">
@@ -30,15 +33,10 @@ import { about } from "../assets/metaData.json";
             {AboutJSON.description}
           </h4>
           <p>{AboutJSON.text}</p>
-          <div class="w-28 h-24 bg-[var(--light-purp)]">
-            <!-- Graphic element here -->
-          </div>
+          <div class="w-16 h-16 bg-[var(--light-purp)]"></div>
         </div>
-        <div class="md:min-w-96 h-[30rem]">
-          <img
-            alt="About Img"
-            class="w-full h-full bg-[var(--grey)] flex-auto flex justify-center items-center"
-          />
+        <div class="min-w-64 max-w-96">
+          <Image src={aboutimg} alt={`Image of the Fiary Browmother`} />
         </div>
       </section>
     </main>
