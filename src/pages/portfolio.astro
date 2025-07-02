@@ -6,6 +6,11 @@ import MetaTags from "../components/MetaTags.astro";
 import PortfolioImg from "../components/PortfolioImg.astro";
 import { portfolio } from "../assets/metaData.json";
 import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+import BookGraphic from "../assets/pictures/graphics/book.png";
+import CauldronGraphic from "../assets/pictures/graphics/cauldron.png";
+import Web4 from "../assets/pictures/graphics/web4.png";
 
 const imagesImport = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/pictures/portfolio/*.jpg"
@@ -32,14 +37,21 @@ const leftColImgs = images.splice(0, Math.round(images.length / 2));
     <Navigation />
     <main class="flex flex-col justify-center items-center pb-16">
       <div
-        class="bg-[var(--grey)] h-[36rem] w-full flex flex-col justify-center items-center"
+        class="bg-[var(--light-purp)] h-[36rem] w-full flex flex-col justify-center items-center relative"
       >
-        <h2>Portfolio</h2>
+        <h2 class="font-style-script">Portfolio</h2>
+        <p>Previous Incantations of The Fairy Brow Mother</p>
+        <div class="w-48 h-48 absolute left-1/2 bottom-6 -translate-x-1/2">
+          <Image src={BookGraphic} alt="" />
+        </div>
       </div>
       <div class="h-16 w-full bg-[var(--dark-purp)]"></div>
       <section
-        class="py-16 px-8 md:px-44 flex flex-col md:flex-row justify-center gap-8 w-full"
+        class="py-16 px-8 md:px-44 flex flex-col md:flex-row justify-center gap-8 w-full relative"
       >
+        <div class="absolute top-0 left-0 opacity-10 -z-10 max-w-5xl">
+          <Image src={Web4} alt="" />
+        </div>
         <div class="flex flex-col gap-8 items-center">
           {
             leftColImgs.map((pic) => {
@@ -55,8 +67,8 @@ const leftColImgs = images.splice(0, Math.round(images.length / 2));
           }
         </div>
       </section>
-      <div class="w-28 h-24 bg-[var(--light-purp)]">
-        <!-- Graphic element here -->
+      <div class="w-28 h-28">
+        <Image src={CauldronGraphic} alt="" />
       </div>
     </main>
     <Footer />

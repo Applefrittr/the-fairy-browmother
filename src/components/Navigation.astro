@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+
+import Bat from "../assets/pictures/graphics/bat.png";
+
 const { fontColor } = Astro.props;
 ---
 
@@ -9,12 +13,15 @@ const { fontColor } = Astro.props;
     The Fairy Browmother
   </h1>
   <nav class="hidden md:flex gap-4 px-8">
-    <a href="/the-fairy-browmother/">Home</a>
-    <a href="/the-fairy-browmother/about">About</a>
-    <a href="/the-fairy-browmother/services">Services</a>
-    <a href="/the-fairy-browmother/portfolio">Portfolio</a>
-    <a href="/the-fairy-browmother/faq">FAQ</a>
-    <a href="/the-fairy-browmother/contact">Contact</a>
+    <a href="/the-fairy-browmother/" class="hover:underline">Home</a>
+    <a href="/the-fairy-browmother/about" class="hover:underline">About</a>
+    <a href="/the-fairy-browmother/services" class="hover:underline">Services</a
+    >
+    <a href="/the-fairy-browmother/portfolio" class="hover:underline"
+      >Portfolio</a
+    >
+    <a href="/the-fairy-browmother/faq" class="hover:underline">FAQ</a>
+    <a href="/the-fairy-browmother/contact" class="hover:underline">Contact</a>
   </nav>
   <button
     class="block md:hidden px-4 py-2 bg-[var(--dark-purp)] text-white rounded-[8px] hover:cursor-pointer"
@@ -33,6 +40,9 @@ const { fontColor } = Astro.props;
     <a href="/the-fairy-browmother/portfolio">Portfolio</a>
     <a href="/the-fairy-browmother/faq">FAQ</a>
     <a href="/the-fairy-browmother/contact">Contact</a>
+    <div class="mt-auto mx-auto">
+      <Image src={Bat} alt="" />
+    </div>
   </nav>
 </section>
 

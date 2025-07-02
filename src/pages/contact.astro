@@ -5,6 +5,9 @@ import Footer from "../components/Footer.astro";
 import contactJSON from "../assets/contact.json";
 import MetaTags from "../components/MetaTags.astro";
 import { contact } from "../assets/metaData.json";
+import { Image } from "astro:assets";
+
+import Rose from "../assets/pictures/graphics/rose.png";
 ---
 
 <html lang="en">
@@ -24,7 +27,7 @@ import { contact } from "../assets/metaData.json";
     <Navigation />
     <main class="pt-16 flex flex-col gap-8">
       <section class="pt-28 w-2xs flex flex-col items-center gap-8 m-auto">
-        <h2>Contact</h2>
+        <h2 class="font-style-script">Contact</h2>
         <p class="text-gray-600 text-center">
           {contactJSON.info}
         </p>
@@ -75,8 +78,12 @@ import { contact } from "../assets/metaData.json";
           </a>
         </nav>
       </section>
-      <div class="flex-auto bg-[var(--light-purp)]">
-        <!-- Graphic goes here -->
+      <div
+        class="flex-auto bg-[var(--light-purp)] flex justify-center items-center"
+      >
+        <div class="w-48 h-48">
+          <Image src={Rose} alt="Black Rose" />
+        </div>
       </div>
     </main>
     <Footer />

@@ -6,6 +6,11 @@ import FAQItem from "../components/FAQItem.astro";
 import FAQJSON from "../assets/faq.json";
 import MetaTags from "../components/MetaTags.astro";
 import { faq } from "../assets/metaData.json";
+import { Image } from "astro:assets";
+
+import Web2 from "../assets/pictures/graphics/web2.png";
+import Web3 from "../assets/pictures/graphics/web3.png";
+import Demon from "../assets/pictures/graphics/demon1.png";
 ---
 
 <html lang="en">
@@ -23,14 +28,25 @@ import { faq } from "../assets/metaData.json";
   </head>
   <body>
     <Navigation />
-    <main class="py-16 px-8 md:px-44">
+    <main class="py-16 px-8 md:px-44 relative">
+      <div class="absolute top-0 right-0 opacity-10 -z-10 max-w-5xl">
+        <Image src={Web2} alt="" />
+      </div>
+      <div class="absolute bottom-0 left-0 opacity-10 -z-10 max-w-5xl">
+        <Image src={Web3} alt="" />
+      </div>
       <section
-        class="flex flex-col md:flex-row gap-8 justify-between items-center pt-28"
+        class="flex flex-col md:flex-row gap-8 justify-around items-center mt-52 relative"
       >
-        <div class="bg-[var(--grey)] w-full md:w-[624px] h-[400px]">
-          <!-- Graphic element here -->
+        <!-- <div class="bg-[var(--light-purp)] w-full md:w-[624px] h-[400px]">
+         
+        </div> -->
+        <h2 class="text-center font-style-script text-nowrap">
+          Frequently Asked Questions
+        </h2>
+        <div class="w-48 h-48 absolute -top-[300%] left-1/2 -translate-x-1/2">
+          <Image src={Demon} alt={`Cute Demon`} />
         </div>
-        <h2 class="text-center m-auto">Frequently Asked Questions</h2>
       </section>
       <section
         class="flex flex-col justify-center items-center gap-8 py-8 xl:px-56"

@@ -6,6 +6,11 @@ import Service from "../components/Service.astro";
 import servicesJSON from "../assets/services.json";
 import MetaTags from "../components/MetaTags.astro";
 import { services } from "../assets/metaData.json";
+import { Image } from "astro:assets";
+
+import Web2 from "../assets/pictures/graphics/web2.png";
+import Web3 from "../assets/pictures/graphics/web3.png";
+import GhostGraphic from "../assets/pictures/graphics/ghost1.png";
 ---
 
 <html lang="en">
@@ -25,12 +30,22 @@ import { services } from "../assets/metaData.json";
     <Navigation />
     <main>
       <div
-        class="bg-[var(--grey)] h-[36rem] w-full flex flex-col justify-center items-center"
+        class="bg-[var(--light-purp)] h-[36rem] w-full flex flex-col justify-center items-center relative"
       >
-        <h2>Services</h2>
+        <h2 class="font-style-script">Services</h2>
         <p>Gifts bestowed by The Fairy Browmother</p>
+
+        <div class="w-48 h-48 absolute left-1/2 bottom-6">
+          <Image src={GhostGraphic} alt={`Cute Ghost with Pumpkin`} />
+        </div>
       </div>
-      <section class="py-16 px-8 md:px-44 flex flex-col gap-8">
+      <section class="py-16 px-8 md:px-44 flex flex-col gap-8 relative">
+        <div class="absolute top-0 right-0 opacity-10 -z-10 max-w-5xl">
+          <Image src={Web2} alt="" />
+        </div>
+        <div class="absolute bottom-0 left-0 opacity-10 -z-10 max-w-5xl">
+          <Image src={Web3} alt="" />
+        </div>
         {
           servicesJSON.map((service, i) => {
             return (
