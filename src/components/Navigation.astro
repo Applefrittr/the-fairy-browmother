@@ -33,9 +33,9 @@ const { fontColor } = Astro.props;
       viewBox="0 0 23 23"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path class="path1-closed" id="path1"></path>
-      <path class="path2-closed" id="path2"></path>
-      <path class="path3-closed" id="path3"></path>
+      <path d="M 2 2.5 L 20 2.5" id="path1"></path>
+      <path d="M 2 9.423 L 20 9.423" id="path2"></path>
+      <path d="M 2 16.346 L 20 16.346" id="path3"></path>
     </svg>
     <nav
       class="text-black text-shadow-none md:hidden flex flex-col fixed h-svh w-60 bg-[var(--light-purp)] gap-8 p-8 top-0 left-0 -translate-x-full transition transform ease-in-out duration-250 border-r-2 border-r-[var(--dark-purp)] overflow-scroll"
@@ -62,13 +62,22 @@ const { fontColor } = Astro.props;
     const path2 = document.querySelector("#path2");
     const path3 = document.querySelector("#path3");
 
+    let isMenuClosed = true;
+
     menuBtn?.addEventListener("click", () => {
       mobileNav?.classList.toggle("translate-x-0");
       body?.classList.toggle("overflow-hidden");
 
-      path1?.classList.toggle("path1-open");
-      path2?.classList.toggle("path2-open");
-      path3?.classList.toggle("path3-open");
+      if (isMenuClosed) {
+        path1?.setAttribute("d", "M 3 16.5 L 17 2.5");
+        path2?.setAttribute("style", "opacity: 0");
+        path3?.setAttribute("d", "M 3 2.5 L 17 16.346");
+      } else {
+        path1?.setAttribute("d", "M 2 2.5 L 20 2.5");
+        path2?.setAttribute("style", "opacity: 1");
+        path3?.setAttribute("d", "M 2 16.346 L 20 16.346");
+      }
+      isMenuClosed = !isMenuClosed;
     });
   </script>
 </section>
