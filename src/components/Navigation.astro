@@ -24,35 +24,51 @@ const { fontColor } = Astro.props;
     <a href="/the-fairy-browmother/contact" class="hover:underline">Contact</a>
   </nav>
   <button
-    class="block md:hidden px-4 py-2 bg-[var(--dark-purp)] text-white rounded-[8px] hover:cursor-pointer"
+    class="block md:hidden px-4 py-2 text-white rounded-[8px] hover:cursor-pointer"
     id="mobile-menu"
   >
-    Navigation
+    <svg
+      width="50"
+      height="40"
+      viewBox="0 0 23 23"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path class="path1-closed" id="path1"></path>
+      <path class="path2-closed" id="path2"></path>
+      <path class="path3-closed" id="path3"></path>
+    </svg>
+    <nav
+      class="text-black text-shadow-none md:hidden flex flex-col fixed h-svh w-60 bg-[var(--light-purp)] gap-8 p-8 top-0 left-0 -translate-x-full transition transform ease-in-out duration-250 border-r-2 border-r-[var(--dark-purp)] overflow-scroll"
+      id="mobile-nav"
+    >
+      <p class="font-bold text-4xl font-style-script">The Fairy Browmother</p>
+      <a href="/the-fairy-browmother/">Home</a>
+      <a href="/the-fairy-browmother/about">About</a>
+      <a href="/the-fairy-browmother/services">Services</a>
+      <a href="/the-fairy-browmother/portfolio">Portfolio</a>
+      <a href="/the-fairy-browmother/faq">FAQ</a>
+      <a href="/the-fairy-browmother/contact">Contact</a>
+      <div class="mt-auto mx-auto w-28 h-28">
+        <Image src={Bat} alt="" />
+      </div>
+    </nav>
   </button>
-  <nav
-    class="text-black text-shadow-none md:hidden flex flex-col fixed h-svh w-60 bg-[var(--light-purp)] gap-8 p-8 top-0 left-0 -translate-x-full transition transform ease-in-out duration-250 border-r-2 border-r-[var(--dark-purp)] overflow-scroll"
-    id="mobile-nav"
-  >
-    <p class="font-bold text-4xl font-style-script">The Fairy Browmother</p>
-    <a href="/the-fairy-browmother/">Home</a>
-    <a href="/the-fairy-browmother/about">About</a>
-    <a href="/the-fairy-browmother/services">Services</a>
-    <a href="/the-fairy-browmother/portfolio">Portfolio</a>
-    <a href="/the-fairy-browmother/faq">FAQ</a>
-    <a href="/the-fairy-browmother/contact">Contact</a>
-    <div class="mt-auto mx-auto">
-      <Image src={Bat} alt="" />
-    </div>
-  </nav>
+
+  <script>
+    const menuBtn = document.querySelector("#mobile-menu");
+    const mobileNav = document.querySelector("#mobile-nav");
+    const body = document.querySelector("body");
+    const path1 = document.querySelector("#path1");
+    const path2 = document.querySelector("#path2");
+    const path3 = document.querySelector("#path3");
+
+    menuBtn?.addEventListener("click", () => {
+      mobileNav?.classList.toggle("translate-x-0");
+      body?.classList.toggle("overflow-hidden");
+
+      path1?.classList.toggle("path1-open");
+      path2?.classList.toggle("path2-open");
+      path3?.classList.toggle("path3-open");
+    });
+  </script>
 </section>
-
-<script>
-  const menuBtn = document.querySelector("#mobile-menu");
-  const mobileNav = document.querySelector("#mobile-nav");
-  const body = document.querySelector("body");
-
-  menuBtn?.addEventListener("click", () => {
-    mobileNav?.classList.toggle("translate-x-0");
-    body?.classList.toggle("overflow-hidden");
-  });
-</script>

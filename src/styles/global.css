@@ -45,5 +45,37 @@ h2 {
 
 h3 {
   font-weight: 600;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
+}
+
+path {
+  transition: all 0.25s ease-in-out;
+  stroke: black;
+  stroke-width: 3px;
+}
+
+.path1-closed {
+  d: path("M 2 2.5 L 20 2.5");
+}
+
+.path2-closed {
+  d: path("M 2 9.423 L 20 9.423");
+  opacity: 1;
+}
+
+.path3-closed {
+  d: path("M 2 16.346 L 20 16.346");
+}
+
+.path1-open {
+  d: path("M 3 16.5 L 17 2.5");
+}
+
+.path2-open {
+  d: path("M 2 9.423 L 20 9.423");
+  opacity: 0;
+}
+
+.path3-open {
+  d: path("M 3 2.5 L 17 16.346");
 }
