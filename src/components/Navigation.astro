@@ -33,9 +33,18 @@ const { fontColor } = Astro.props;
       viewBox="0 0 23 23"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M 2 2.5 L 20 2.5" id="path1"></path>
-      <path d="M 2 9.423 L 20 9.423" id="path2"></path>
-      <path d="M 2 16.346 L 20 16.346" id="path3"></path>
+      <path
+        d="M 2 2.5 L 20 2.5"
+        id="path1"
+        class=`path-${fontColor === 'white' ? 'white' : 'black'}`></path>
+      <path
+        d="M 2 9.423 L 20 9.423"
+        id="path2"
+        class=`path-${fontColor === 'white' ? 'white' : 'black'}`></path>
+      <path
+        d="M 2 16.346 L 20 16.346"
+        id="path3"
+        class=`path-${fontColor === 'white' ? 'white' : 'black'}`></path>
     </svg>
     <nav
       class="text-black text-shadow-none md:hidden flex flex-col fixed h-svh w-60 bg-[var(--light-purp)] gap-8 p-8 top-0 left-0 -translate-x-full transition transform ease-in-out duration-250 border-r-2 border-r-[var(--dark-purp)] overflow-scroll"

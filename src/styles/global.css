@@ -49,6 +49,13 @@ h3 {
 }
 
 path {
-  stroke: black;
   stroke-width: 3px;
+}
+
+.path-black {
+  stroke: black;
+}
+
+.path-white {
+  stroke: white;
 }
